@@ -62,20 +62,17 @@ if __name__ == "__main__":
     microphone = sr.Microphone()
 
 ## Kelime Belirt
-    word1 = "hello"
-    word2 = "hi"
-    word3 = "my name is"
-    word4 = "Turkish"
-    print("word1= hello")
-    print("word2= hi")
-    print("word3= My Name İs")
-    print("word4= Turkish")
+    word1 = input("Kelime: ")
+    word2 = input("Kelime: ")
+    word3 = input("Kelime: ")
+    word4 = input("Kelime: ")
+
     ##------------
     ##Word1
     time.sleep(0)
     for i in range(NUM_GUESSES):
         for j in range(PROMPT_LIMIT):
-            print('Word{} deki Kelimeyi Söyle!'.format(i+1))
+            print(' {}. Kelimeyi Söyle!'.format(i+1))
             guess = recognize_speech_from_mic(recognizer, microphone)
             if guess["transcription"]:
                 break
@@ -108,7 +105,7 @@ if __name__ == "__main__":
     time.sleep(0)
     for i in range(NUM_GUESSES):
         for j in range(PROMPT_LIMIT):
-            print('Word{} deki Kelimeyi Söyle!'.format(i+2))
+            print(' {}. Kelimeyi Söyle!'.format(i+2))
             guess = recognize_speech_from_mic(recognizer, microphone)
             if guess["transcription"]:
                 break
@@ -141,7 +138,7 @@ if __name__ == "__main__":
     time.sleep(0)
     for i in range(NUM_GUESSES):
         for j in range(PROMPT_LIMIT):
-            print('Word{} deki Kelimeyi Söyle!'.format(i+3))
+            print(' {}. Kelimeyi Söyle!'.format(i+3))
             guess = recognize_speech_from_mic(recognizer, microphone)
             if guess["transcription"]:
                 break
@@ -175,10 +172,10 @@ if __name__ == "__main__":
     time.sleep(0)
     for i in range(NUM_GUESSES):
         for j in range(PROMPT_LIMIT):
-            print('Word{} deki Kelimeyi Söyle!'.format(i+4))
-            guess = recognize_speech_from_mic(recognizer, microphone)
-            if guess["transcription"]:
-                break
+              print(' {}. Kelimeyi Söyle!'.format(i+4))
+        guess = recognize_speech_from_mic(recognizer, microphone)
+        if guess["transcription"]:
+            break
             if not guess["success"]:
                 break
             print("Anlayamadım")
