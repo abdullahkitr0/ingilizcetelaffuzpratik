@@ -1,2 +1,2 @@
-# -ngilizcetelefuzpratik
-Abdullah Tarafından Geliştirilen İlngilizce Telefuz python Programı
+# ingilizcetelaffuzpratik
+Abdullah Tarafından Geliştirilen İngilizce Telaffuz python Programı...
